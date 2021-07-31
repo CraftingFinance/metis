@@ -1,0 +1,41 @@
+[workspace]
+members = [
+    "crates/components/access/ownable",
+    "crates/components/access/control",
+    "crates/components/access/control-enumerable",
+    "crates/components/token/erc20",
+    "crates/components/token/erc721",
+    "crates/components/token/erc721/receiver",
+    "crates/components/token/erc721/types",
+    "crates/components/token/erc777",
+    "crates/components/token/erc1155",
+    "crates/components/token/erc1155/receiver/",
+    "crates/components/security/pausable",
+    "crates/components/security/reentrancy-guard",
+    "crates/components/governance/timelock-controller",
+    "crates/components/governance/timelock-controller/receiver",
+    "crates/components/utils/escrow",
+    "crates/components/utils/escrow/stub",
+    "crates/lang",
+    "crates/lang/macro",
+    "crates/lang/contract",
+    "crates/lang/codegen",
+
+    "contracts/patra-env",
+    "contracts/traits/access/ownership",
+    "contracts/traits/token/erc20",
+]
+exclude = [
+<<<<<<< HEAD
+    "example/",
+=======
+    "example",
+    "examples",
+>>>>>>> 1720fb0d2d0009558db50bdc61e39fffca276e4d
+    "contracts/impls",
+    "contracts/stubs",
+]
+
+[profile.release]
+panic = "abort"
+lto = true
